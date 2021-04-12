@@ -1,6 +1,8 @@
 import React from "react";
-import Head from "next/head";
+import ImportedHead from "next/head";
 import styles from "../styles/Home.module.css";
+
+const Head = "default" in ImportedHead ? ImportedHead.default : ImportedHead;
 
 export default function Home() {
   return (
